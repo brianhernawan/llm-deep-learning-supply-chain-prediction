@@ -1,0 +1,52 @@
+{
+  "rows": {
+    "train": 1566,
+    "test": 400,
+    "test_used": 389
+  },
+  "cleaning_rules": {
+    "weight_cap_kg": 98.9,
+    "cost_cap_usd": 729.3525
+  },
+  "cv_mae": {
+    "Mean baseline": 80.55044907461505,
+    "Linear Regression": 15.683694043446286,
+    "Decision Tree": 20.830970057838567,
+    "Random Forest": 15.0519319837073,
+    "XGBoost (tuned)": 12.995377854753434,
+    "Keras MLP": 14.827756951426855
+  },
+  "xgb_params": {
+    "subsample": 1.0,
+    "reg_lambda": 0.1,
+    "n_estimators": 600,
+    "min_child_weight": 1,
+    "max_depth": 2,
+    "learning_rate": 0.03,
+    "colsample_bytree": 1.0
+  },
+  "keras_epochs": 50,
+  "test": {
+    "Linear Regression": {
+      "mae": 16.680298554433882,
+      "median_abs_error": 13.121026067833157,
+      "r2": 0.9216159829338653
+    },
+    "XGBoost (tuned)": {
+      "mae": 13.53929051200651,
+      "median_abs_error": 9.584024353027345,
+      "r2": 0.9355447280703936
+    },
+    "Keras MLP": {
+      "mae": 14.515137536213146,
+      "median_abs_error": 9.512659912109378,
+      "r2": 0.9332937221298313
+    },
+    "Ensemble (XGBoost + Keras)": {
+      "mae": 13.097015639748856,
+      "median_abs_error": 9.339644165039061,
+      "r2": 0.9387852330150408,
+      "ms_per_quote": 89.4
+    }
+  }
+}

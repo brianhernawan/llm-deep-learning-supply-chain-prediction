@@ -1,0 +1,26 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792642018.377192   61249 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792642019.697724   61249 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+E0000 00:00:1792642073.945876   61249 cuda_platform.cc:52] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Train 1566 rows, test 389 rows, caps {'weight_cap_kg': 98.9, 'cost_cap_usd': 729.3525}
+5-fold CV MAE (USD): {'Mean baseline': 80.55, 'Linear Regression': 15.68, 'Decision Tree': 20.83, 'Random Forest': 15.05}
+Tuned XGBoost CV MAE 13.00 with {'subsample': 1.0, 'reg_lambda': 0.1, 'n_estimators': 600, 'min_child_weight': 1, 'max_depth': 2, 'learning_rate': 0.03, 'colsample_bytree': 1.0}
+Keras CV MAE 14.83
+{
+  "Linear Regression": {
+    "mae": 16.680298554433882,
+    "median_abs_error": 13.121026067833157,
+    "r2": 0.9216159829338653
+  },
+  "XGBoost (tuned)": {
+    "mae": 13.53929051200651,
+    "median_abs_error": 9.584024353027345,
+    "r2": 0.9355447280703936
+  },
+  "Keras MLP": {
+    "mae": 14.515137536213146,
+    "median_abs_error": 9.512659912109378,
+    "r2": 0.9332937221298313
+  }
+}
